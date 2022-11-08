@@ -3,3 +3,5 @@ It is my first pet-project. This is a clasical online store, where you can chose
 - Redux Toolkit;
 - RTK Query;
 - Bootstrap.
+
+You can visit this app at the link: https://project-store-react.vercel.app/
