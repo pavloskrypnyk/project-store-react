@@ -1,0 +1,20 @@
+.filter-item__content {
+
+}
+.filter-item-title {
+    font-weight: 500;
+    font-size: 18px;
+}
+.filter-item-list {
+    list-style: none;
+    padding: 0;
+}
+.filter-item-list-elt {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 0.5rem;
+    font-size: 16px;
+}
+.filter-item-list-elt-title{
+    padding-left: 0.5rem;
+}
