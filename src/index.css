@@ -247,7 +247,7 @@ input[type="submit"] {
   }
 
   .os-header {
-    margin-right: 1rem;
+    margin-right: 4rem;
     position: fixed;
     width: -webkit-fill-available;
     background-color: #ffffff;
@@ -264,7 +264,8 @@ input[type="submit"] {
     width: -webkit-fill-available;
   }
   .os-products {
-    display: block;
+    margin-top: 5.5rem;
+    grid-template-columns: 1fr;
   }
   .filters-icon-mobile {
     display: flex;
@@ -290,7 +291,7 @@ input[type="submit"] {
   }
   .os-products {
     margin-top: 5.5rem;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 1fr;
   }
   .header-logo {
     font-weight: 900;
