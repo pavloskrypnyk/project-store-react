@@ -1,17 +1,16 @@
-import '../pagination/index.css';
+import "../pagination/index.css";
 
 const PaginationItem = ({ pageIndex, isActive, onPageItemClick }) => {
-    const activeClass = isActive ? 'active' : '';
+  const activeClass = isActive ? "active" : "";
 
-    return (
-        <li onClick={() => onPageItemClick(pageIndex)}
-                href="#"
-                className={`pagination__item ${activeClass}`}>
-            <a>
-                {pageIndex}
-            </a>
-        </li>
-    );
-}
+  return (
+    <li
+      onClick={() => onPageItemClick(pageIndex)}
+      className={`pagination-item ${activeClass}`}
+    >
+      {pageIndex}
+    </li>
+  );
+};
 
-export default PaginationItem
+export default PaginationItem;

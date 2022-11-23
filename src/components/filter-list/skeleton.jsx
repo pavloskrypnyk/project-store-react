@@ -1,8 +1,8 @@
-import React from "react"
-import ContentLoader from "react-content-loader"
+import React from "react";
+import ContentLoader from "react-content-loader";
 
 const CategorySkeleton = (props) => (
-    <ContentLoader 
+  <ContentLoader
     className="filter-item-list-elt"
     speed={2}
     width={235}
@@ -14,6 +14,6 @@ const CategorySkeleton = (props) => (
   >
     <rect x="10" y="5" rx="5" ry="5" width="200" height="20" />
   </ContentLoader>
-)
+);
 
-export default CategorySkeleton
+export default CategorySkeleton;

@@ -1,9 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-
-
 const initialState = {
     filters: {
+        openSideBar: false,
         search: '',
         choseCategory: [],
         choseBrands: [],
@@ -50,7 +49,10 @@ const filtersSlice = createSlice({
         },
         clearAllFilters(state){
             state.filters = initialState.filters
-        } 
+        }, 
+        setOpenSideBar(state, action){
+            state.filters.openSideBar = action.payload
+        }
     }
 });
 
@@ -65,7 +67,8 @@ export const {
     setRatingMin, 
     setRatingMax, 
     setSearch, 
-    clearAllFilters 
+    clearAllFilters,
+    setOpenSideBar 
     } = filtersSlice.actions;
 
 export default filtersSlice.reducer;

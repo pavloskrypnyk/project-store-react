@@ -1,38 +1,35 @@
 import { useSelector } from "react-redux";
 import CartItem from "../cart-item";
-import './index.css';
+import "./index.css";
 
-const CartList = ({onOpenCart}) => {
-    const products = useSelector(state => state.cart.cart)
-    const {totalPrice} = useSelector(state => state.cart)
-    
-    return (
-          <>           
-            <div className="page__cart">    
-                <div className="cart__container">
-                    <div className="cart__close-button" onClick={() => onOpenCart(false)}>
-                        <div className="close-button__container">
-                        <i className="bi bi-x-lg"></i>
-                        </div>
-                    </div>
-                    <div className="cart__list">
-                        {products.map((product) => <CartItem {...product} key={product.id}/>)}
-                    </div>                    
-                    
-                    <div className="cart__total-oreder">
-                        <div className="total-order__container">
-                            <div className="total-order__title">Total:</div>
-                            <div className="tottal-order__total-price">{totalPrice}</div>
-                            <div className="total-order__valute">UAH</div>
-                        </div>
-                    </div>
-                    <div className="cart__order-button">
-                        <div className="order-button__title">ORDER</div>
-                    </div>
-                </div>
-            </div>
-        </>
-    )
-}
+const CartList = ({ onOpenCart }) => {
+  const products = useSelector((state) => state.cart.cart);
+  const { totalPrice } = useSelector((state) => state.cart);
 
-export default CartList
+  return (
+    <>
+      <div className="os-cart">
+        <div className="cart-content">
+          <div className="cart-close-button" onClick={() => onOpenCart(false)}>
+            <i className="bi bi-x-lg"></i>
+          </div>
+
+          <div className="cart-list">
+            {products.map((product) => (
+              <CartItem {...product} key={product.id} />
+            ))}
+          </div>
+
+          <div className="cart-total-oreder">
+            <div className="total-order-title">Total:</div>
+            <div className="tottal-order-price">{totalPrice}</div>
+            <div className="total-order-valute">UAH</div>
+          </div>
+          <button className="cart-order-button">ORDER</button>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default CartList;
